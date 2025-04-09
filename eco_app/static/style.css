@@ -1,0 +1,241 @@
+/* === ESTILO GENERAL === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #e8f5e9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* === ENCABEZADO Y PIE DE PÁGINA === */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2e7d32;
+    margin: 0;
+}
+
+.subtitulo {
+    color: #388e3c;
+    font-size: 1.1em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* === CONSEJOS === */
+.consejo {
+    background: #dcedc8;
+    padding: 15px;
+    border-left: 5px solid #689f38;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* === BARRA DE PROGRESO === */
+.progreso-box {
+    margin-bottom: 20px;
+}
+
+.barra {
+    background: #c8e6c9;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progreso {
+    background: #43a047;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* === BOTONES GENERALES === */
+.acciones {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #43a047;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #388e3c;
+}
+
+/* === TARJETAS DE HÁBITOS === */
+.habitos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f1f8e9;
+    border-left: 5px solid #66bb6a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #33691e;
+}
+
+/* === BOTONES PEQUEÑOS === */
+.botones {
+    margin-top: 10px;
+}
+
+.btn-small {
+    background: #aed581;
+    color: #1b5e20;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.btn-small:hover {
+    background: #9ccc65;
+}
+
+.eliminar {
+    background: #ef9a9a !important;
+    color: #b71c1c !important;
+}
+
+.eliminar:hover {
+    background: #e57373 !important;
+}
+
+/* === FORMULARIO === */
+.form-card {
+    background: #f9fbe7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logros {
+    background: #fff8dc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 30px; /* 👈 Esto es lo que faltaba */
+}
+
+
+/* === LOGROS === */
+.logros {
+    background: #fffde7;
+    padding: 15px;
+    border-left: 5px solid #fbc02d;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logros h2 {
+    margin-top: 0;
+    color: #f9a825;
+}
+
+.logros ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.logros li {
+    font-size: 1.1em;
+    padding: 5px 0;
+}
+.form-card {
+    background: #fefde0;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+    text-align: center;
+    color: #33691e;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2e7d32;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    resize: vertical;
+}
+
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group.checkbox label {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.form-actions .btn {
+    background: #4caf50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-actions .btn:hover {
+    background: #388e3c;
+}

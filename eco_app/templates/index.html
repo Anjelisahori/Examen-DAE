@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Consejo del día -->
+<div class="consejo">
+    🌍 <strong>Consejo del día:</strong> <em>{{ consejo }}</em>
+</div>
+
+<!-- Progreso general -->
+<div class="progreso-box">
+    <strong>Progreso general:</strong> {{ porcentaje }}%
+    <div class="barra">
+        <div class="progreso" style="width: {{ porcentaje }}%"></div>
+    </div>
+</div>
+
+<!-- Botón para añadir nuevo hábito -->
+<div class="acciones">
+    <a href="{% url 'agregar' %}" class="btn">➕ Agregar nuevo hábito</a>
+</div>
+
+<!-- Logros obtenidos -->
+<div class="logros">
+    <h2>🏅 Logros obtenidos</h2>
+    {% if logros %}
+        <ul>
+            {% for logro in logros %}
+                <li>{{ logro }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aún no has obtenido logros. ¡Empieza cumpliendo tus hábitos!</p>
+    {% endif %}
+</div>
+
+<!-- Lista de hábitos -->
+<div class="habitos-grid">
+    {% for h in habitos %}
+        <div class="card">
+            <h3>{{ h.nombre }}</h3>
+            <p>{{ h.descripcion }}</p>
+            <p><strong>Estado:</strong> 
+                {% if h.cumplido %}
+                    ✅ Cumplido
+                {% else %}
+                    ❌ Pendiente
+                {% endif %}
+            </p>
+            <div class="botones">
+                <a href="{% url 'editar' h.id %}" class="btn-small">✏️ Editar</a>
+                <a href="{% url 'eliminar' h.id %}" class="btn-small eliminar">🗑 Eliminar</a>
+            </div>
+        </div>
+    {% empty %}
+        <p>No tienes hábitos aún. ¡Empieza a cuidar el planeta!</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
